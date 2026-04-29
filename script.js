@@ -13,4 +13,4 @@ function mensagemBoasVindas(nome) {
 function somar(c,d){
   return c + d
 }
-module.exports = { maiorNumero, mensagemBoasVindas, somar };
+module.exports = {maiorNumero, mensagemBoasVindas, somar};
