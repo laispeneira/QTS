@@ -1,10 +1,16 @@
-function somar(a, b) {
-  return a + b;
-}
 
+function maiorNumero(a,b){
+  if (a>b){
+    return a
+  }
+  else {
+    return b 
+  }
+}
 function mensagemBoasVindas(nome) {
   return `Olá, ${nome}!`;
 }
-
-module.exports = { somar, mensagemBoasVindas };
-export default { somar, mensagemBoasVindas };
+function somar(c,d){
+  return c + d
+}
+module.exports = { maiorNumero, mensagemBoasVindas, somar };
