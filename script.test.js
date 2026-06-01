@@ -1,4 +1,4 @@
-const { maiorNumero, mensagemBoasVindas, somar, ImparPar, Votar, Numeros, Bonus, Dirigir, Semestre } = require('./script');
+const { maiorNumero, mensagemBoasVindas, somar, ImparPar, Votar, Numeros, Bonus, Dirigir, Semestre, letra,media,senha } = require('./script');
 
 test('maior numero', () => {
   expect(maiorNumero(2, 3)).toBe(3);
@@ -27,6 +27,15 @@ test('condição dirigir', () => {
 });
 test('semestre', () => {
   expect(Semestre('janeiro')).toBe('primeiro semestre');
+});
+test('vogal consoante', () => {
+  expect(letra('a')).toBe('É uma vogal');
+});
+test('média', () => {
+  expect(media(5,5,5,5,5)).toBe('A média é: 5');
+});
+test('usuário e senha', () => {
+  expect(senha('Admin','123')).toBe('Conectado com sucesso');
 });
 
 

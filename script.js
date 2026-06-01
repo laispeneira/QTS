@@ -45,17 +45,62 @@ function Bonus(a){
     return `Seu bônus é de: ${conta} e o total ficará ${conta+a}`
   }
 }
+
 function Dirigir(a){
   if(a<18) {return `Voce não pode dirigir`}
   if(a>=18) {return `Voce pode dirigir`}
 }
+
 function Semestre(a){
   if(a== 'janeiro' || 'fevereiro' || 'março' || 'abril' || 'maio' || 'junho')
   return `primeiro semestre`
   if(a== 'julho' || 'agosto' || 'setembro' || 'outubro' || 'novembro' || 'dezembro')
   return `segundo semestre`
 }
-// sla
 
-module.exports = {maiorNumero, mensagemBoasVindas, somar, ImparPar, Votar, Numeros, Bonus, Dirigir, Semestre};
+function letra(letra){
+let letra = prompt("Digite uma letra:")
+if (
+  letra == "a" ||
+  letra == "e" ||
+  letra == "i" ||
+  letra == "o" ||
+  letra == "u"
+) {
+  return`É uma vogal`
+} else {
+  return`É uma consoante"`
+}
+}
+
+function media(numeros){
+    let soma = 0;
+
+    for (let i = 0; i < numeros.length; i++) {
+        soma += numeros[i];
+    }
+
+    let media = soma / numeros.length;
+    return`A média é: ${media}`
+}
+    let numeros = [];
+    for (let i = 0; i < 5; i++) {
+        numeros.push(Number(prompt("Digite um número:")));
+}
+
+
+
+
+
+function senha(usuario,senha){
+let usuario = prompt("Digite o usuário:");
+let senha = prompt("Digite a senha:");
+if (usuario == "Admin" && senha == "123") {
+  return `Conectado com sucesso`
+} else {
+  return `Acesso negado, usuário ou senha incorretos`
+}
+}
+
+module.exports = {maiorNumero, mensagemBoasVindas, somar, ImparPar, Votar, Numeros, Bonus, Dirigir, Semestre,letra,media,senha};
 
